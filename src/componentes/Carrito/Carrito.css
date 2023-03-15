@@ -1,0 +1,11 @@
+.carrito{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.carrito_icono{
+    color: aliceblue;
+    font-size: 28px;
+}
