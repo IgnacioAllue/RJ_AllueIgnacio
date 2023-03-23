@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './ItemListContainer.css'
 import MOCK_DATA from '../../data/MOCK_DATA.json'
+import { useParams } from 'react-router-dom'
 
 
 const PedirDatos = () =>{
@@ -14,11 +15,18 @@ const PedirDatos = () =>{
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
+    
+    const {categoryId} = useParams()
+    console.log(categoryId)
 
     useEffect(() => {
         PedirDatos()
             .then((res) => {
-                setProductos(res)
+                if (categoryId) {
+                    setProductos( res.filter((prod) => prod.category === categoryId))
+                } else {
+                    setProductos(res)
+                }
             })
             .catch((error) => {
                 console.log(error)

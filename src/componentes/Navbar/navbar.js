@@ -9,9 +9,9 @@ export const Navbar = () => {
           <div className="header_container">
             <img src= {Logo} className="header_logo" alt='logo'/>
             <nav className="navbar">
-              <p className="navbar_link">EnlaceN1 </p>
-              <p className="navbar_link">EnlaceN2 </p>
-              <p className="navbar_link">EnlaceN3 </p>
+              <a href='/' className="navbar_link">Productos </a>
+              <a href='/nosotros' className="navbar_link">Nosotros </a>
+              <a href='/contactenos' className="navbar_link">Contactenos </a>
             </nav>
             <Carrito/>
           </div>

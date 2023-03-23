@@ -4,7 +4,7 @@
         "name": "Producto 1",
         "description": "Lorem ipsum...",
         "price": 12500,
-        "category": "Carpa",
+        "category": "carpa",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     },
     {
@@ -12,7 +12,7 @@
         "name": "Producto 2",
         "description": "Lorem ipsum...",
         "price": 15000,
-        "category": "Carpa",
+        "category": "carpa",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     },
     {
@@ -20,7 +20,7 @@
         "name": "Producto 3",
         "description": "Lorem ipsum...",
         "price": 17500,
-        "category": "Carpa",
+        "category": "carpa",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     },
     {
@@ -28,7 +28,7 @@
         "name": "Producto 4",
         "description": "Lorem ipsum...",
         "price": 2500,
-        "category": "Herramientas",
+        "category": "herramientas",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     },
     {
@@ -36,7 +36,7 @@
         "name": "Producto 5",
         "description": "Lorem ipsum...",
         "price": 3750,
-        "category": "Herramientas",
+        "category": "herramientas",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     },
     {
@@ -44,7 +44,7 @@
         "name": "Producto 6",
         "description": "Lorem ipsum...",
         "price": 1500,
-        "category": "Herramientas",
+        "category": "herramientas",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     },
     {
@@ -52,7 +52,7 @@
         "name": "Producto 7",
         "description": "Lorem ipsum...",
         "price": 7500,
-        "category": "Accesorios",
+        "category": "accesorios",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     },
     {
@@ -60,7 +60,7 @@
         "name": "Producto 8",
         "description": "Lorem ipsum...",
         "price": 5500,
-        "category": "Accesorios",
+        "category": "accesorios",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     },
     {
@@ -68,7 +68,7 @@
         "name": "Producto 9",
         "description": "Lorem ipsum...",
         "price": 8000,
-        "category": "Accesorios",
+        "category": "accesorios",
         "img": "https://dummyimage.com/200x200.png/5fa2dd/ffffff"
     }
 ]
