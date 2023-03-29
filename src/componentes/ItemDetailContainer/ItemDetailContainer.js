@@ -11,21 +11,22 @@ const ItemDetailContainer = () =>{
    useEffect(() => {
          pedirDatos()   
             .then((res) =>{
-                setItems( res.find((items) => items.id === Number(itemId)))
+              if (itemId) {  setItems( res.find((items) => items.id === Number(itemId)))
+            } else {
+                setItems(res)
+            }
             })
-   }, [])
+   }, [itemId])
    
     return (
         <div className="container my-5">
-            <h2 className="list-container__title">ItemDetailContainer</h2>
+            <h2>{items.name}</h2>
             <hr/>
             <div>
-                <h2>{items.name}</h2>
                 <img src={items.img}/>
                 <p>{items.description}</p>
                 <p>Precio: ${items.price}</p>
                 <p>Categoria: {items.category}</p>
-            
             </div>
         </div>
     )
