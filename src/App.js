@@ -1,5 +1,6 @@
 import './App.css';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import Nosotros from './componentes/Nosotros/Nosotros'
 import Contactenos from './componentes/Contactenos/Contactenos'
 import { Navbar } from './componentes/Navbar/navbar';
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path='/' element={ <ItemListContainer /> }/>
             <Route path='/productos/:categoryId' element={ <ItemListContainer /> }/>
+            <Route path='/detail/:itemId' element={ <ItemDetailContainer /> }></Route>
             <Route path='/nosotros' element={ <Nosotros />}/>
             <Route path='/contactenos' element={ <Contactenos />}/>
             <Route path='*' element={ <Navigate to={"/"}/>}/>

@@ -22,14 +22,23 @@
     gap: 16px;
   }
   
-  .navbar_link{
+  .navbar__link{
     font-size: 36px;
     font-weight: 700;
     color: aliceblue;
     margin: 0;
     cursor: pointer;
+    text-decoration: none;
+  }
+
+  .navbar__link:hover{
+    color:greenyellow
   }
 
   .carrito{
     color: aliceblue;
+  }
+
+  .carrito:hover{
+    color: greenyellow;
   }
