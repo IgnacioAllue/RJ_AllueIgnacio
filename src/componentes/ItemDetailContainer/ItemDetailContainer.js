@@ -15,6 +15,7 @@ const ItemDetailContainer = () =>{
             } else {
                 setItems(res)
             }
+            
             })
    }, [itemId])
    
