@@ -2,20 +2,24 @@ import { useEffect, useState } from 'react'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
 import { pedirDatos } from '../../helpers/pedirDatos'
-import { Link } from 'react-router-dom'
+import ItemList from './ItemList'
 
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
     
     const {categoryId} = useParams()
 
 
     useEffect(() => {
+        setLoading(true)
+
         pedirDatos()
             .then((res) => {
                 if (categoryId) {
                     setProductos( res.filter((prod) => prod.category === categoryId))
+                    
                 } else {
                     setProductos(res)
                 }
@@ -23,24 +27,17 @@ const ItemListContainer = () => {
             .catch((error) => {
                 console.log(error)
             })
+            .finally(() => {
+                setLoading(false)
+            })
     }, [categoryId])
 
     return (
         <div className="container my-5">
-            <h2 className="list-container__title">ItemListContainer</h2>
-            <hr/>
-            <div className='row'>
-            {productos.map((prod) => (
-            <div className='col-3 m-3'>
-                <h2>{prod.name}</h2>
-                <img src={prod.img}/>
-                <p>Precio: ${prod.price}</p>
-                <p>Categoria: {prod.category}</p>
-                <Link to={`/detail/${prod.id}`} className='btn btn-primary'>Ver mas</Link>
-            </div>))
+            {loading
+                ? <h2>Cargando...</h2>
+                : <ItemList items={productos}/>
             }
-            </div>
-           
         </div>
     )
 }

@@ -6,11 +6,15 @@ import Contactenos from './componentes/Contactenos/Contactenos'
 import { Navbar } from './componentes/Navbar/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { CartProvider } from './componentes/CartContext/CartContext';
+import Cart from './componentes/Carrito/Carrito';
+
 
 function App() {
 
   return (
-    <div>
+    <CartProvider>
+
       <BrowserRouter>
         <Navbar />
 
@@ -18,13 +22,15 @@ function App() {
             <Route path='/' element={ <ItemListContainer /> }/>
             <Route path='/productos/:categoryId' element={ <ItemListContainer /> }/>
             <Route path='/detail/:itemId' element={ <ItemDetailContainer /> }></Route>
+            <Route path='/cart' element={ <Cart/> }></Route>
             <Route path='/nosotros' element={ <Nosotros />}/>
             <Route path='/contactenos' element={ <Contactenos />}/>
             <Route path='*' element={ <Navigate to={"/"}/>}/>
           </Routes>
 
       </BrowserRouter>
-    </div>
+      
+    </CartProvider>
   );
 }
 
