@@ -2,7 +2,6 @@ import './App.css';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import Nosotros from './componentes/Nosotros/Nosotros'
-import Contactenos from './componentes/Contactenos/Contactenos'
 import { Navbar } from './componentes/Navbar/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
@@ -24,7 +23,6 @@ function App() {
             <Route path='/detail/:itemId' element={ <ItemDetailContainer /> }></Route>
             <Route path='/cart' element={ <Cart/> }></Route>
             <Route path='/nosotros' element={ <Nosotros />}/>
-            <Route path='/contactenos' element={ <Contactenos />}/>
             <Route path='*' element={ <Navigate to={"/"}/>}/>
           </Routes>
 
