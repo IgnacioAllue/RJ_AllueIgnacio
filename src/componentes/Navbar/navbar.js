@@ -1,5 +1,5 @@
 import './navbar.css'
-import Logo from './hoguera.png'
+import Logo from './camping.png'
 import Carrito from '../CarritoIcono/CarritoIcono'
 import { Link } from 'react-router-dom'
 
